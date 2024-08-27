@@ -623,7 +623,7 @@ public String delete(Long id){
 O recurso de paginação permite ao buscar todos os registros de uma tabela, podemos controlar a quantidade de registros que irá aparecer por requisição evitando assim que milhares de registros sejam exibidos de uma só vez causando problema de latência. 
 Como paginação é algo comum, o Spring já tem um mecanismo para fazer isso.
 
-Usando o capítulo [Criando Consulta(MÉTODO HTTP GET)](./backend/criando_docker_compose_mysql.md) como exemplo,
+Usando o capítulo Criando Consulta (MÉTODO HTTP GET) como exemplo,
  basta fazer algumas poucas alterações diretamente no método da controller.  
 Basicamente as alterações são:  
 
