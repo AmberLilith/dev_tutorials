@@ -85,6 +85,5 @@ Ao acessar com sucesso, será mostrado algo assim:
 Agora podemos dar comandos como por exemplo ```show databases;``` para exibir todos os bancos de dados criados, ```create database nome_desejado;``` para criar um banco de dados, comandos sql para criar tabela, popular tabela, etc.
 
 :::important
-									         |
 Usando o Windows, sempre que precisar acessar o banco de dados, é preciso iniciar a          
 aplicação Docker Desktop.	
