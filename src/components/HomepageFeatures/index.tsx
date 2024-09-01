@@ -1,53 +1,46 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
+import Link from '@docusaurus/Link';
 
 type FeatureItem = {
   title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: JSX.Element;
+  image: any;
+  link: string;
+  description: string;
 };
 
 const FeatureList: FeatureItem[] = [
   {
     title: 'BackEnd',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Tutoriais relacionados a backEnd - Criando API, Spring Boot, Java, Kotlin, etc!
-      </>
-    ),
+    image: require('@site/static/img/backend.png').default,
+    link: '/docs/category/backend',
+    description: 'Tutoriais relacionados a backEnd - Criando API, Spring Boot, Java, Kotlin, etc',
   },
   {
     title: 'FrontEnd',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Tutoriais de frontEnd - HTML, CSS, Bootstrap, JS, Angular, React, etc.
-      </>
-    ),
+    image: require('@site/static/img/frontend.png').default,
+    link: '/docs/category/frontend',
+    description: 'Tutoriais de frontEnd - HTML, CSS, Bootstrap, JS, Angular, React, etc.'
   },
   {
     title: 'Geral',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Totoriais gerais relacionados a deploy, containerização, infra, etc.
-      </>
-    ),
+    image: require('@site/static/img/geral.png').default,
+    link: '/docs/category/geral',
+    description: 'Totoriais gerais relacionados a deploy, containerização, infra, etc.'
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({title, image,link, description}: FeatureItem) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img src={image} style={{width: '100px', height:'100px'}}/>
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
-        <a href=''>Acessar documentação de {title} {"->"}</a>
+        <a href={link}>Acessar documentação de {title} {"->"}</a>
       </div>
     </div>
   );
