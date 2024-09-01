@@ -172,14 +172,14 @@ Além disso, o uso de DTOs também ajuda a reduzir o acoplamento entre as camada
 Antes do java 14, para criar um DTO criávamos uma classe normal tendo a necessidade de criar os campos, implementar métodos getters, setters, equals, 
 hashCode e toString()
 
-Agora temos a opção de ao invés de criar a DTO usando a palavra reservada ***class***, usamos a palavra chave ***record***.
+Agora temos a opção de ao invés de criar a DTO usando a palavra reservada **class**, usamos a palavra chave **record**.
 
 Um Record, nada mais é que um tipo de classe que armazena dados. É a mesma ideia de construção similar a um JavaBean, possui construtor, 
 atributos e métodos acessores. Porém, ao invés de possibilitar qualquer alteração a classe é imutável. Também possui os métodos equals, hashCode e toString().
 
-IMPORTANTE!
+:::info
 Um Record é imutável, ou seja,se precisar de uma DTO que precise alterar algum dado, será preciso criar uma classe normal.
-
+:::
 Exemplo:
 
 ```

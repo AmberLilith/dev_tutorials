@@ -41,9 +41,9 @@ Onde:
   
 O resto pode deixar como está.
 
-Importante!
+:::info
 Para cada API que você quiser mockar as respostas, é preciso criar um bloco de código como acima. 
-
+:::
 ## Criando arquivo mappings.json
 O arquivo mappins.json conterá todos os cenários que desejamos mockar da aplicação.
 
@@ -103,7 +103,7 @@ E cada cenário pode ser configurado:
 - o body da resposta no caso de métodos POST, PUT, etc:
   - ```"jsonBody":{"name": "Amber Silva","city": "Uberlândia"}```
 
-IMPORTANTE!
+:::info
 Como podemos ver no header de entrada, temos o segui trecho:
 ```
 "wiremock_application":
@@ -114,7 +114,7 @@ Como podemos ver no header de entrada, temos o segui trecho:
 Esse objeto é usado quando formos chamar o mock da aplicação. Sem ele, o wiremock não conseguirá diferenciar entre cada objeto dentro da lista mapping.
 No exemplo aqui, no header de saída de quem está chamando vamos colocar a chave wiremock_application e no valor vai ser APPLICATION_200.
 O valor wiremock_application pode ser o mesmo para todos os cenários dentro de mapping, porém o valor de equalTo deve ser único para cada cenário.
-
+:::
 
 
 

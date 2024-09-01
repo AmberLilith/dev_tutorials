@@ -68,7 +68,7 @@ const config: Config = {
       title: 'Tutoriais Dev',
       logo: {
         alt: 'Tutoriais Dev Logo',
-        src: 'img/logo.svg',
+        src: 'img/tutorial.png',
       },
       items: [
         {
