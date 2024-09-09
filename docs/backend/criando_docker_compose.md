@@ -25,7 +25,11 @@ COPY build/libs/seu-app.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
 ```
 Onde:
-- build/libs/seu-app.jar é o caminho para o arquivo .jar gerado após buildar a aplicação **(*)**
+- build/libs/seu-app.jar é o caminho para o arquivo .jar gerado após buildar a aplicação. **(*)**
+- seu-app.jar será o arquivo com o nome parecido com **eq3-0.0.1-SNAPSHOT.jar** que será criado quando a aplicação for buildada. **(*)**  
+  
+  Veja imagem exemplo:  
+  ![](./img/criando_docker_compose/arquivo_jar_gerado.png)
 
 ### Passos Detalhados
 Dockerfile:
@@ -35,15 +39,17 @@ Dockerfile:
 - **ENTRYPOINT**: Define o comando que será executado quando o container iniciar, que neste caso é para rodar o JAR da aplicação.
 
 :::info
-(*) Para que buildar a aplicação é preciso usar o comando abaixo:  
+(*) Para buildar a aplicação é preciso usar o comando abaixo:  
 ```gradle title="Comando para Gradle"
 gradle clean build
 ```
 
 ```maven title="Comando para Maven"
-gradle clean install
+maven clean install
 ```
 :::
+
+ 
 
 ## Configurar o docker-compose.yml
 Com o Dockerfile pronto, o próximo passo é criar o arquivo docker-compose.yml que orquestrará o container da aplicação. Se você deseja apenas subir a aplicação Spring Boot, aqui está um exemplo básico do arquivo docker-compose.yml:  
@@ -119,5 +125,5 @@ networks:
 Agora, para subir o container da aplicação, basta rodar o seguinte comando na raiz do projeto, onde o **docker-compose.yml** está localizado:
 
 ```bash
-docker-compose up --build
+docker-compose up -d
 ```
