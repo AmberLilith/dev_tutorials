@@ -455,7 +455,34 @@ Algumas anotações que são bem comuns de serem vistas em projetos que utilizam
 **@Min** -> Valida o tamanho mínimo de um campo.
 
 Lembrando que a maioria dessas anotações aceita entre parênteses preencher um atributo ‘message’ que é a mensagem que será mostrada caso a 
-validação não passe.
+validação não passe.  
+
+Exemplo de uso:
+
+```
+import com.eq3.app.dtos.ClientDto
+import jakarta.persistence.Entity
+import jakarta.persistence.GeneratedValue
+import jakarta.persistence.Id
+import jakarta.validation.constraints.NotBlank
+import java.util.UUID
+
+
+@Entity
+data class Client(
+    @Id
+    @GeneratedValue(generator = "UUID")
+    val id: UUID? = null,
+    @NotBlank(message = "Nome deve ser informado e não pode ser vazio!")
+    val name: String,
+    @NotBlank(message = "O CPF deve ser informado e não pode ser vazio!")
+    val cpf: String
+) {
+    constructor(clientDto: ClientDto):this(null, clientDto.name, clientDto.cpf)
+}
+```
+
+
 
 
 ---
