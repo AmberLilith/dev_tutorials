@@ -97,12 +97,21 @@ Para que o Spring reconheça a classe como uma Controller, ela deve ser anotada 
 Exemplo:
 ```
 @RestController
-@RequestMapping("/teste")
-public class TesteController {
+@RequestMapping("/clients")
+class ClientController {
+    @Autowired
+    lateinit var clientService: ClientService
 
-    @GetMapping
-    public String teste(){
-        return "Testando";
+    @PostMapping
+    fun create(@RequestBody clientDto: ClientDto): ResponseEntity<ClientDto>{
+        val response = clientService.create(clientDto)
+        return ResponseEntity.ok(response)
+    }
+
+    @GetMapping("/{id}")
+    fun get(@PathVariable id: UUID): ResponseEntity<Client>{
+        val response = clientService.get(id)
+        return ResponseEntity.ok(response)
     }
 }
 ```
@@ -145,8 +154,9 @@ pois precisamos informar ao Spring que essa esse parâmetro receberá o body da 
 
 ```
 @PostMapping
-    public void create(@RequestBody String json){
-        System.out.println(json);
+    fun create(@RequestBody clientDto: ClientDto): ResponseEntity<ClientDto>{
+        val response = clientService.create(clientDto)
+        return ResponseEntity.ok(response)
     }
 ```
 
