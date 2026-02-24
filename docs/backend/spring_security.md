@@ -21,7 +21,7 @@ Adicione dentro da tag ```<dependencies>``` do **pom.xml** (Se for Maven) as seg
 Após adicionar essas dependências, o spring security já será ativado e automaticamente todas as URLs da aplicação serão bloqueadas.
 Por padrão, é gerado um login cujo usuário é user e a senha é gerada toda vez que a aplicação for subida localmente. Ela poderá ser visualizada nos logs como na imagem abaixo:
 
-[![Descrição da imagem](./img/spring_security/log_apos_inserir_dependencia.png)](./img/spring_security/log_apos_inserir_dependencia.png)
+[![](./img/spring_security/log_apos_inserir_dependencia.png)](./img/spring_security/log_apos_inserir_dependencia.png)
 
 Com esse login, ao fazer uma requisição para a API, a URI não será bloqueada.   
 Esse login padrão só deve ser usado a nível de desenvolvimento. Nunca para produção.
