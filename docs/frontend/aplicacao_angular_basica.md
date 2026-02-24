@@ -11,22 +11,22 @@ Ele cria uma nova aplicação não standalone no Angular 17, já configura o arq
 Se quiser criar uma aplicação standalone no Angular 17 use o comando ```ng new my-app```
 
 3. Vai aparecer a perguntando qual estilo você deseja usar, escolha com as setas direcionais e dê enter:
-[![Descrição da imagem](./img/aplicacao_angular_basica/escolher_estilo.png)](./img/aplicacao_angular_basica/escolher_estilo.png)
+[![](./img/aplicacao_angular_basica/escolher_estilo.png)](./img/aplicacao_angular_basica/escolher_estilo.png)
 
 4. Depois se você não tiver  usado o parametro **--ssr**, vai perguntar se deseja trabalhar com renderização do lado do servidor, digite **y** ou **n** para respectivamente **sim** ou **não**:
-[![Descrição da imagem](./img/aplicacao_angular_basica/escolher_forma_renderizacao.png)](./img/aplicacao_angular_basica/escolher_forma_renderizacao.png)
+[![](./img/aplicacao_angular_basica/escolher_forma_renderizacao.png)](./img/aplicacao_angular_basica/escolher_forma_renderizacao.png)
 
 5. Vai aparecer em seguida informações como abaixo, basta esperar que finalize:
-[![Descrição da imagem](./img/aplicacao_angular_basica/logs_criando_aplicacao.png)](./img/aplicacao_angular_basica/logs_criando_aplicacao.png)
+[![](./img/aplicacao_angular_basica/logs_criando_aplicacao.png)](./img/aplicacao_angular_basica/logs_criando_aplicacao.png)
 
 6. Agora que finalizou, acesse a pasta do seu projeto, que tem o mesmo nome que você informou para o projeto
 
 
 7. Já dentro da pasta do projeto, é possível já levantar o servidor e visualizar a página padrão que é criada. Basta usar a linha de comando ```ng serve```. Com isso vai aparecer como abaixo, basta copiar o link ```http://localhost:4200/```  para visualizar a página:
-[![Descrição da imagem](./img/aplicacao_angular_basica/subindo_ng_serve.png)](./img/aplicacao_angular_basica/subindo_ng_serve.png)
+[![](./img/aplicacao_angular_basica/subindo_ng_serve.png)](./img/aplicacao_angular_basica/subindo_ng_serve.png)
 
 8. A página vai parecer mais ou menos como abaixo:
-[![Descrição da imagem](./img/aplicacao_angular_basica/pagina_apos_subir.png)](./img/aplicacao_angular_basica/pagina_apos_subir.png)
+[![](./img/aplicacao_angular_basica/pagina_apos_subir.png)](./img/aplicacao_angular_basica/pagina_apos_subir.png)
 
 ### A estrutura de pastas
 - O arquivo **package.json** é onde ficam as dependências do projeto.
@@ -43,11 +43,11 @@ A pasta assets que é onde ficam arquivos estáticos como imagens.
 
 Se ao subir sua aplicação pela primeira vez ocorrer o erro como abaixo:
 
-[![Descrição da imagem](./img/aplicacao_angular_basica/erro_primeira_subida.png)](./img/aplicacao_angular_basica/erro_primeira_subida.png)
+[![](./img/aplicacao_angular_basica/erro_primeira_subida.png)](./img/aplicacao_angular_basica/erro_primeira_subida.png)
 
 Abra o arquivo indicado nos dois logs, que é o mesmo arquivo, e substitua a linha comentada pela linha logo abaixo dela conforma a imagem que segue:
 
-[![Descrição da imagem](./img/aplicacao_angular_basica/interface_com_erro.png)](./img/aplicacao_angular_basica/interface_com_erro.png)
+[![](./img/aplicacao_angular_basica/interface_com_erro.png)](./img/aplicacao_angular_basica/interface_com_erro.png)
 
 ```
 …
@@ -676,7 +676,7 @@ Dessa forma, é configurado o **JSON Server** para consultar o arquivo **db.json
 Estando ainda dentro da pasta backend, após salvar todas as alterações feitas, de o comando npm start para subir o servidor.  
 Obs.: Caso o comando npm start resulte no erro abaixo, use o comando ```npx json-server --watch db.json```. Ao rodar o comando, será feita a pergunta como no print abaixo, basta digitar y e dar enter:
 
-[![Descrição da imagem](./img/aplicacao_angular_basica/confirmar_instalacao_json_server.png)](./img/aplicacao_angular_basica/confirmar_instalacao_json_server.png)
+[![](./img/aplicacao_angular_basica/confirmar_instalacao_json_server.png)](./img/aplicacao_angular_basica/confirmar_instalacao_json_server.png)
 
 O terminal passará a carregar os recursos. A mensagem **"Hi!"** aparecerá e também será possível ver o nosso recurso ou endpoint na seção "**Resources**". Se jogar o endpoint no navegador será possível visualizar o json contido no arquivo **db.json**.
 

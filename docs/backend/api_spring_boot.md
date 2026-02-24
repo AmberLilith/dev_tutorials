@@ -290,8 +290,9 @@ Exemplo:
 public class Doctor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @UuidGenerator
+    @Column(name = "id", updatable = false, nullable = false)
+    private UUID id;
 
     private String name;
 
@@ -317,13 +318,11 @@ Onde:
 
 
 - **@id** indica que a entidade terá como identificador único o campo anotado por ela, e esse campo estará relacionado à coluna de mesmo nome na
-   tabela do banco de dados, a qual representa a chave primária (primary key).
+   tabela do banco de dados, a qual representa a chave primária (primary key). Valor será gerenciado e criado automaticamente pelo JPA.
 
 
-- **@GeneratedValue** é utilizada para informar que a geração do valor do identificador único da entidade será gerenciada pelo provedor de persistência. 
+- **@UuidGenerator** é utilizada para informar que a geração do valor do identificador único da entidade será gerenciada pelo provedor de persistência. 
 Essa anotação deve ser adicionada logo após a anotação @Id.
-Provedor de persistência, saiba que estamos referenciando o framework escolhido para que a aplicação possa se comunicar com o banco de dados. 
-Alguns exemplos são o Hibernate, EclipseLink e OpenJPA.
 
 
 - **@Enumerated** é usado para podermos instruir um provedor JPA a converter uma enumeração em seu valor ordinal ou String. 
@@ -360,7 +359,7 @@ Então anotamos o campo da tabela Medico referente ao Endereco com **@Embedded**
 
 ---
 
-## Criando Reponsitory
+## Criando Repository
 
 Um Repository é a classe responsável por todo acesso a dados de uma Entidade, ações como incluir, editar, apagar, e diversas consultas ficam no repositório. 
 No Spring Boot a gente só declara uma interface que implementa uma das classes CrudRepository ou JpaRepository (Essa última implementa a primeira).
@@ -522,7 +521,7 @@ Uma resposta HTTP é composta basicamente de cabeçalho (**header**), status cod
 
  - **@Valid** diz ao Spring que todos os campos de DoctorDto devem ser validados (Caso seus campos tenham recebido anotações de validação. Veja aqui como implementar validações)
 
-É bom lembrar que para cada método no controller, é preciso ter um correspondente na service, pois como já dito, o controller nunca chama diretamente uma respository, ficando a cargo da service fazer isso, então a controller vai chamar a service e essa última que chama a reponsitory. 
+É bom lembrar que para cada método no controller, é preciso ter um correspondente na service, pois como já dito, o controller nunca chama diretamente uma respository, ficando a cargo da service fazer isso, então a controller vai chamar a service e essa última que chama a repository. 
 Essa é uma boa prática que propicia o baixo acoplamento, ou seja, se precisarmos fazer mudar ao na conexão com o banco de dados, por exemplo, vamos mexer só na repository deixando o restante intacto. 
 
 
@@ -541,7 +540,7 @@ Onde:
 
 
 É bom lembrar que para cada método no controller, é preciso ter um correspondente na service, pois como já dito, o controller nunca chama 
-diretamente uma respository, ficando a cargo da service fazer isso, então a controller vai chamar a service e essa última que chama a reponsitory.   
+diretamente uma respository, ficando a cargo da service fazer isso, então a controller vai chamar a service e essa última que chama a repository.   
 Essa é uma boa prática que propicia o baixo acoplamento, ou seja, se precisarmos fazer mudar ao na conexão com o banco de dados, por exemplo, 
 vamos mexer só na repository deixando o restante intacto. 
 
@@ -582,7 +581,7 @@ public DoctorUpdatedDto update(DoctorUpdatedDto doctorUpdatedDto) {
     ```
 Caso o usuário informado na requisição não exista, é lançada uma exceção.  
 
-É bom lembrar que para cada método no controller, é preciso ter um correspondente na service, pois como já dito, o controller nunca chama diretamente uma respository, ficando a cargo da service fazer isso, então a controller vai chamar a service e essa última que chama a reponsitory. 
+É bom lembrar que para cada método no controller, é preciso ter um correspondente na service, pois como já dito, o controller nunca chama diretamente uma respository, ficando a cargo da service fazer isso, então a controller vai chamar a service e essa última que chama a repository. 
 Essa é uma boa prática que propicia o baixo acoplamento, ou seja, se precisarmos fazer mudar ao na conexão com o banco de dados, por exemplo, vamos mexer só na repository deixando o restante intacto. 
 
 
