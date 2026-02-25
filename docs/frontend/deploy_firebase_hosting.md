@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-title: "Deploy no Firebase Hosting"
+title: "Deploy no Firebase Hosting (Aplicação Angular)"
 ---
 
 1. Se ainda não tiver feito, primeiro altere o arquivo angular.json e exclua todo o conteúdo do item budgets como abaixo deixando só []:
