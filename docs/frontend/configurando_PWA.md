@@ -31,22 +31,26 @@ Em seguida altere os valores para os da sua aplicação.
         {
             "sizes": "192x192",
             "src": "/icon-192x192.png",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "maskable any"
         },
         {
             "sizes": "256x256",
             "src": "/icon-256x256.png",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "maskable any"
         },
         {
             "sizes": "384x384",
             "src": "/icon-384x384.png",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "maskable any"
         },
         {
             "sizes": "512x512",
             "src": "/icon-512x512.png",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "maskable any"
         }
     ],
     "orientation": "portrait",
