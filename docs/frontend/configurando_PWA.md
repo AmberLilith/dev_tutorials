@@ -17,6 +17,51 @@ https://progressier.com/pwa-manifest-generator
 
 https://www.infyways.com/tools/web-manifest-generator/
 
+Ou copie e cole o código abaixo em um arquivo com o nome manifest.webmanifest.js.
+Em seguida altere os valores para os da sua aplicação.
+
+<details>
+  <summary>Código exemplo manifest.webmanifest.js</summary>
+
+  ```js
+ {
+    "theme_color": "#8936FF",
+    "background_color": "#2EC6FE",
+    "icons": [
+        {
+            "sizes": "192x192",
+            "src": "/icon-192x192.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "256x256",
+            "src": "/icon-256x256.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "384x384",
+            "src": "/icon-384x384.png",
+            "type": "image/png"
+        },
+        {
+            "sizes": "512x512",
+            "src": "/icon-512x512.png",
+            "type": "image/png"
+        }
+    ],
+    "orientation": "portrait",
+    "display": "fullscreen",
+    "dir": "auto",
+    "lang": "pt-BR",
+    "name": "Lockin",
+    "short_name": "Lockin",
+    "start_url": "./",
+    "scope": "./",
+    "description": "Aplicação que possibilita guardar e acessar logins a qualquer momentos pelo navegador."
+}
+  ```
+</details>
+
 
 Neles você vai passar as informações da sua aplicação bem como o ícone da mesma:
 
