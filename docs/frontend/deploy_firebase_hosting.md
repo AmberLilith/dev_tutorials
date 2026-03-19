@@ -5,6 +5,9 @@ title: "Deploy no Firebase Hosting (Aplicação Angular)"
 
 1. ## Altere arquivo angular.json
 
+   Se os passos de 1 a 5 já foram realizados, basta efetuar os passos [Dê build na aplicação](#5-dê-build-na-aplicação) e 
+[Inicie o deploy](#6-inicie-o-deploy)
+
    Se ainda não tiver feito, primeiro altere o arquivo angular.json e exclua todo o conteúdo do item budgets como abaixo deixando só []:
     ```
       "configurations": {
@@ -23,7 +26,9 @@ title: "Deploy no Firebase Hosting (Aplicação Angular)"
                     ],
       ```
 
-2. ## Inicie o firebase 
+## 1. Stack e decisões de arquitetura
+
+## 1. Inicie o firebase 
 
    Insira o comando abaixo no terminal:
    ```
@@ -33,13 +38,13 @@ title: "Deploy no Firebase Hosting (Aplicação Angular)"
 
     [![Confirmar iniciar Firebase](./img/deploy_firebase_hosting/firebase_init.png)](./img/deploy_firebase_hosting/firebase_init.png)
 
-3. ## Selecione a feature
+2. ## Selecione a feature
 
    Agora selecione a feature **"Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys"** como monstrado abaixo:
    
    [![Selecionando a Feature](./img/deploy_firebase_hosting/selecionando_feature.png)](./img/deploy_firebase_hosting/selecionando_feature.png)
 
-4. ## Selecionando o projeto
+3. ## Selecionando o projeto
 
    1. Primeiro escolha **Use an existing project**
 
@@ -49,7 +54,7 @@ title: "Deploy no Firebase Hosting (Aplicação Angular)"
 
       [![Escolhendo nome do projeto](./img/deploy_firebase_hosting/selecionar_projeto_2.png)](./img/deploy_firebase_hosting/selecionar_projeto_2.png)
    
-5. ## Configuração do Hosting
+4. ## Configuração do Hosting
 
    1. Como na imagem abaixo, digite Y e dê enter:
 
@@ -67,13 +72,13 @@ title: "Deploy no Firebase Hosting (Aplicação Angular)"
 
    [![Confirmações](./img/deploy_firebase_hosting/hosting_setup_confirmacao.png)](./img/deploy_firebase_hosting/hosting_setup_confirmacao.png)
 
-6. ## Dê build na aplicação
+## 5. Dê build na aplicação
 
    Use o com o comando ```ng build --configuration=production```:
 
    [![Iniciando o deploy](./img/deploy_firebase_hosting/build_production.png)](./img/deploy_firebase_hosting/build_production.png)
 
-7. ## Inicie o deploy 
+## 6. Inicie o deploy 
 
    Agora use o comando ```firebase deploy```
 
