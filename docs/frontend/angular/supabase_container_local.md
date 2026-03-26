@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-title: "Deploy no Firebase Hosting (Aplicação Angular)"
+title: "Supabase Container Local (Aplicação Angular)"
 ---
 # Supabase Local com Docker
 
